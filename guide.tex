@@ -57,7 +57,20 @@
                 \item \verb!\argmin[\quad]{\alpha} \fn{\alpha}! produces
                     $$ \argmin[\quad]{\alpha} \fn{\alpha} $$
             \end{itemize}
-            
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[fragile]{Expected values}
+        \begin{itemize}
+            \item Use \verb!\expval! for the usual way of writing expected values.
+                \begin{itemize}
+                    \item Write \verb!\expval[{x \sim \fn[p]{x}}]{\fn[g]{x}}! to produce
+                    \footnote{Yes, this is the correct way to provide optional arguments
+                    in \LaTeX: {\tt [\string{...\string}]} }:
+                    $$\expval[{x \sim \fn[p]{x}}]{ \fn[g]{x} }$$
+                    \item or, simply \verb!\expval{\fn{x}}! to produce:
+                    $$\expval{\fn{x}}$$
+                \end{itemize}
         \end{itemize}
     \end{frame}
 

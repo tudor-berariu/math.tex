@@ -1,24 +1,29 @@
 % Version 0.1
 
-% Organizing your formulas
-\newcommand{\rp}[1]{\left( #1 \right)}
+%% -- I. Organizing your formulas
+\newcommand{\rp}[1]{\left( {#1} \right)}
 
 % ----------
 
-% Functions
-\newcommand{\fn}[2][f]{#1\rp{#2}}
+%% -- II. Functions
+\newcommand{\fn}[2][f]{{#1}\rp{#2}}
 
+% - II.a. Derivatives
 \newcommand{\fstpd}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\fstpdfn}[2]{\fn[\frac{\partial}{\partial #2}]{#1}}
 \newcommand{\sndpd}[3]{\frac{\partial^2 #1}{\partial #2 \partial #3}}
 \newcommand{\sndpdfn}[3]{\fn[\frac{\partial^2}{\partial #2 \partial #3}]{#1}}
 
+% - II.b. Operators
 \newcommand{\argmax}[2][\;]{\underset{#2}{\operatorname{argmax}}#1}
 \newcommand{\argmin}[2][\;]{\underset{#2}{\operatorname{argmin}}#1}
 
+% - II.c. Probabilities
+\newcommand*{\expval}[2][]{\mathbb{E}_{{#1}}\left[ #2 \right]}
+
 % ----------
 
-% Matrices
+% III. Matrices
 \newcommand{\tr}[1]{{#1}^{\intercal}}
 \newcommand{\inv}[1]{{#1}^{-1}}
 
