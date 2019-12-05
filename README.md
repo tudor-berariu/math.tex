@@ -2,7 +2,7 @@
 
 A single file providing useful commands for writing equations in LaTeX.
 
-Check `guide.pdf` for some examples.
+Check [guide.pdf](https://github.com/tudor-berariu/math.tex/blob/master/guide.pdf) for some examples.
 
 ## Importing `math.tex` in Overleaf
 
