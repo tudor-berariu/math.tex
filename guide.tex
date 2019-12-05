@@ -1,0 +1,42 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\title{math.tex}
+\author{Tudor Berariu}
+
+\input{math.tex}
+
+\section{Functions}
+
+\begin{document}
+    \begin{frame}[fragile]{Functions}
+        \begin{itemize}
+            \item Use \verb!\fn! to write \alert{function applications} and not worry about parantheses.
+            \begin{itemize}
+                \item \verb!\fn[\max]{x,0}! produces $$\fn[\max]{x, 0}$$
+                \item \verb!\fn{\fn[g]{\fn[h]{x^2 + 1}^2}^{-1} - 1}! produces
+                  $$\fn[f]{\fn[g]{\fn[h]{x^2 + 1}^2}^{-1} - 1}$$
+                \end{itemize}
+            \item Define new functions on top of \verb!\fn! for nicer equations.
+        \begin{verbatim}
+    \newcommand{\foo}[1]{\fn[foo]{#1}}
+
+    \foo{x + 1}
+            \end{verbatim}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[fragile]{Partial derivatives}
+        \begin{itemize}
+            \item Use \verb!\fstpd! and \verb!\fstpdfn! to write \alert{first order partial derivatives}.
+                \begin{itemize}
+                    \item \verb!\fstpd{f}{x}! produces $$\fstpd{f}{x}$$
+                    \item \verb!\fstpdfn{\fn[\sin]{2x + 1}^2 +3}{x}! produces
+                     $$\fstpdfn{\fn[\sin]{2x + 1}^2 +3}{x}$$
+                \end{itemize}
+            \item Similarly, use \verb!\sndpd! and \verb!\sndpdfn! for
+             \alert{second order partial derivatives}.
+                $$\sndpd{\fn{x, y}}{x}{y} = \sndpdfn{x^2 + 2y}{x}{y}$$
+        \end{itemize}        
+    \end{frame}
+\end{document}
