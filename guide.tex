@@ -46,6 +46,21 @@
         \end{itemize}        
     \end{frame}
 
+    \begin{frame}[fragile]{Some useful operators}
+        \begin{itemize}
+            \item Use \verb!\argmax{var}! for the {\tt argmax} operator. \verb!\argmin! exists as well.
+                $$\argmax{\lambda} \fn{\lambda}$$
+            \item Both \verb!\argmin! and \verb!\argmax! take an optional argument intended to insert the needed space aftet the oprator. The default is \verb!\;!, but you can provide whatever you feel appropriate.
+            \begin{itemize}
+                \item \verb!\argmin[]{\alpha} \fn{\alpha}! produces
+                    $$ \argmin[]{\alpha} \fn{\alpha} $$
+                \item \verb!\argmin[\quad]{\alpha} \fn{\alpha}! produces
+                    $$ \argmin[\quad]{\alpha} \fn{\alpha} $$
+            \end{itemize}
+            
+        \end{itemize}
+    \end{frame}
+
 \section{Tensors}
 \label{sec:tensors}
 
