@@ -1,17 +1,23 @@
 \documentclass{beamer}
 \usetheme{CambridgeUS}
-
-\title{math.tex}
-\author{Tudor Berariu}
+\beamertemplatenavigationsymbolsempty
 
 \input{math.tex}
 
-\section{Functions}
+\title{math.tex}
+\subtitle{a short guide}
+\author{Tudor Berariu}
+\date{version 0.1}
 
 \begin{document}
-    \begin{frame}[fragile]{Functions}
+
+\frame[plain]{\titlepage}
+
+\section{Functions}
+
+\begin{frame}[fragile]{Functions}
         \begin{itemize}
-            \item Use \verb!\fn! to write \alert{function applications} and not worry about parantheses.
+            \item Use \verb!\fn! to write \alert{function applications} and not to worry about parantheses.
             \begin{itemize}
                 \item \verb!\fn[\max]{x,0}! produces $$\fn[\max]{x, 0}$$
                 \item \verb!\fn{\fn[g]{\fn[h]{x^2 + 1}^2}^{-1} - 1}! produces
@@ -39,4 +45,31 @@
                 $$\sndpd{\fn{x, y}}{x}{y} = \sndpdfn{x^2 + 2y}{x}{y}$$
         \end{itemize}        
     \end{frame}
+
+\section{Tensors}
+\label{sec:tensors}
+
+    \begin{frame}[fragile]{Matrix operations}
+        \begin{itemize}
+            \item Use \verb!\tr! to \alert{transpose} matrices (it uses the \verb!\intercal! symbol).
+                \begin{itemize}
+                    \item \verb!\tr{A}! produces $\tr{A}$.
+                \end{itemize}
+            \item Use \verb!\inv! to refer to the \alert{inverse} of a matrix.
+            \begin{itemize}
+                \item \verb!\inv{A}! produces $\inv{A}$.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+\section{Organizing your formulas}
+\label{sec:org}
+
+    \begin{frame}[fragile]{Parentheses and brackets}
+        \begin{itemize}
+            \item Use \verb!\rp! for \alert{round parentheses} around some expression.
+            Do that if you prefer this to writing \verb!\left( ... \right)! yourself.
+        \end{itemize}
+    \end{frame}
+
 \end{document}
